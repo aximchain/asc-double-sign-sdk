@@ -1,15 +1,15 @@
 package client
 
 import (
-	"github.com/binance-chain/bsc-double-sign-sdk/types/bsc"
+	asc "github.com/aximchain/asc-double-sign-sdk/types/asc"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 )
 
-func EthHeaderToBscHeader(ethHeader *ethtypes.Header) *bsc.Header {
+func EthHeaderToAscHeader(ethHeader *ethtypes.Header) *asc.Header {
 	if ethHeader == nil {
 		return nil
 	}
-	return &bsc.Header{
+	return &asc.Header{
 		ParentHash:  ethHeader.ParentHash,
 		UncleHash:   ethHeader.UncleHash,
 		Coinbase:    ethHeader.Coinbase,

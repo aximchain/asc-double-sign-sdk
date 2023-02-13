@@ -4,39 +4,39 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/binance-chain/bsc-double-sign-sdk/types/bsc"
-	"github.com/binance-chain/go-sdk/common/types"
-	gosdkmsg "github.com/binance-chain/go-sdk/types/msg"
+	asc "github.com/aximchain/asc-double-sign-sdk/types/asc"
+	"github.com/aximchain/go-sdk/common/types"
+	gosdkmsg "github.com/aximchain/go-sdk/types/msg"
 )
 
 const (
-	TypeSideChainSubmitEvidence = "bsc_submit_evidence"
+	TypeSideChainSubmitEvidence = "asc_submit_evidence"
 
 	SideChainSlashMsgRoute = "slashing"
 )
 
-type MsgBscSubmitEvidence struct {
+type MsgAscSubmitEvidence struct {
 	Submitter types.AccAddress `json:"submitter"`
-	Headers   []*bsc.Header    `json:"headers"`
+	Headers   []*asc.Header    `json:"headers"`
 }
 
-func NewMsgBscSubmitEvidence(submitter types.AccAddress, headers []*bsc.Header) MsgBscSubmitEvidence {
+func NewMsgAscSubmitEvidence(submitter types.AccAddress, headers []*asc.Header) MsgAscSubmitEvidence {
 
-	return MsgBscSubmitEvidence{
+	return MsgAscSubmitEvidence{
 		Submitter: submitter,
 		Headers:   headers,
 	}
 }
 
-func (MsgBscSubmitEvidence) Route() string {
+func (MsgAscSubmitEvidence) Route() string {
 	return SideChainSlashMsgRoute
 }
 
-func (MsgBscSubmitEvidence) Type() string {
+func (MsgAscSubmitEvidence) Type() string {
 	return TypeSideChainSubmitEvidence
 }
 
-func headerEmptyCheck(header *bsc.Header) error {
+func headerEmptyCheck(header *asc.Header) error {
 	if header.Number == 0 {
 		return fmt.Errorf("header number can not be zero ")
 	}
@@ -50,7 +50,7 @@ func headerEmptyCheck(header *bsc.Header) error {
 	return nil
 }
 
-func (msg MsgBscSubmitEvidence) ValidateBasic() error {
+func (msg MsgAscSubmitEvidence) ValidateBasic() error {
 	if len(msg.Submitter) != types.AddrLen {
 		return fmt.Errorf("Expected delegator address length is %d, actual length is %d", types.AddrLen, len(msg.Submitter))
 	}
@@ -82,15 +82,15 @@ func (msg MsgBscSubmitEvidence) ValidateBasic() error {
 	return nil
 }
 
-func (msg MsgBscSubmitEvidence) GetSignBytes() []byte {
+func (msg MsgAscSubmitEvidence) GetSignBytes() []byte {
 	bz := gosdkmsg.MsgCdc.MustMarshalJSON(msg)
 	return gosdkmsg.MustSortJSON(bz)
 }
 
-func (msg MsgBscSubmitEvidence) GetSigners() []types.AccAddress {
+func (msg MsgAscSubmitEvidence) GetSigners() []types.AccAddress {
 	return []types.AccAddress{msg.Submitter}
 }
 
-func (msg MsgBscSubmitEvidence) GetInvolvedAddresses() []types.AccAddress {
+func (msg MsgAscSubmitEvidence) GetInvolvedAddresses() []types.AccAddress {
 	return msg.GetSigners()
 }
