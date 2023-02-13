@@ -301,9 +301,8 @@ github.com/wsddn/go-ecdh v0.0.0-20161211032359-48726bab9208/go.mod h1:IotVbo4F+m
 github.com/yuin/goldmark v1.1.27/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=
 github.com/yuin/goldmark v1.2.1/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=
 github.com/yuin/goldmark v1.4.13/go.mod h1:6yULJ656Px+3vBD8DxQVa3kxgyrAnzto9xy5taEt/CY=
+github.com/zondax/ledger-go v0.9.0 h1:oTrtFqPFA4VdCPRvqMaN45mQnJxkPc0JxoVZfCoUpjI=
 github.com/zondax/ledger-go v0.9.0/go.mod h1:b2vIcu3u9gJoIx4kTWuXOgzGV7FPWeUktqRqVf6feG0=
-github.com/zondax/ledger-go v0.14.1 h1:Pip65OOl4iJ84WTpA4BKChvOufMhhbxED3BaihoZN4c=
-github.com/zondax/ledger-go v0.14.1/go.mod h1:fZ3Dqg6qcdXWSOJFKMG8GCTnD7slO/RL2feOQv8K320=
 go.etcd.io/bbolt v1.3.3 h1:MUGmc65QhB3pIlaQ5bB4LwqSj6GIonVJXpZiaKNyaKk=
 go.etcd.io/bbolt v1.3.3/go.mod h1:IbVyRI1SCnLcuJnV2u8VeU0CEYM7e686BmAb1XKL+uU=
 go.opentelemetry.io/proto/otlp v0.7.0/go.mod h1:PqfVotwruBrMGOCsRd/89rSnXhoiJIqeYNgFYFoEGnI=

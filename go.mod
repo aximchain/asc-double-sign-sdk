@@ -9,13 +9,16 @@ require (
 	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/gorilla/websocket v1.4.1 // indirect
 	github.com/magiconair/properties v1.8.1 // indirect
+	github.com/pkg/errors v0.9.1 // indirect
 	github.com/prometheus/client_golang v1.1.0 // indirect
 	github.com/rcrowley/go-metrics v0.0.0-20190826022208-cac0b30c2563 // indirect
 	github.com/tendermint/btcd v0.1.1 // indirect
 	github.com/tendermint/go-amino v0.15.0
 	github.com/tendermint/tendermint v0.32.3
-	github.com/zondax/ledger-go v0.14.1 // indirect
+	github.com/zondax/hid v0.9.1 // indirect
 	golang.org/x/crypto v0.5.0
+	google.golang.org/grpc v1.50.1 // indirect
+	google.golang.org/protobuf v1.28.1 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 )
 
