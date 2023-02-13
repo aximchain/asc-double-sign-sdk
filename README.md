@@ -1,4 +1,4 @@
-# ASC-double-sign-sdk
+# asc-double-sign-sdk
 
 This library enables community members to monitor incorrect behaviors of ASC validators and submit evidence to Axim Chain. Please refer to [asc-relayer](https://github.com/aximchain/axc-relayer) for example usage.
 
